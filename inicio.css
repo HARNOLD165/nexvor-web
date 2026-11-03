@@ -1,0 +1,470 @@
+/* =========================================
+   1. VARIABLES DE LOS 3 TEMAS
+   ========================================= */
+:root {
+    /* TEMA CYBERPUNK (Predeterminado) */
+    --bg-page: #080c10;
+    --bg-input: #0d131a;
+    --text-main: #ffffff;
+    --text-muted: #8b9bb4;
+    --accent-color: #00ff7f; 
+    --accent-glow: rgba(0, 255, 127, 0.4);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --active-btn-text: #000000;
+    --image-tint: rgba(0, 255, 127, 0.15); /* Tinte verde para la imagen */
+}
+
+body.theme-corporate {
+    /* TEMA CORPORATIVO */
+    --bg-page: #ffffff;
+    --bg-input: #f1f5f9;
+    --text-main: #1a202c;
+    --text-muted: #4a5568;
+    --accent-color: #0d8ca1; 
+    --accent-glow: rgba(13, 140, 161, 0.3);
+    --border-color: rgba(0, 0, 0, 0.15);
+    --active-btn-text: #ffffff;
+    --image-tint: rgba(13, 140, 161, 0.3); /* Tinte azul para la imagen */
+}
+
+body.theme-redteam {
+    /* TEMA RED TEAM */
+    --bg-page: #121212;
+    --bg-input: #1a1d24;
+    --text-main: #ffffff;
+    --text-muted: #a0aec0;
+    --accent-color: #f43f5e; 
+    --accent-glow: rgba(244, 63, 94, 0.4);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --active-btn-text: #ffffff;
+    --image-tint: rgba(244, 63, 94, 0.2); /* Tinte rojo para la imagen */
+}
+
+/* =========================================
+   2. ESTILOS GLOBALES Y LAYOUT
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    height: 100vh;
+    overflow: hidden; /* Evita el scroll */
+}
+
+/* Diseño de pantalla dividida */
+.split-layout {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* =========================================
+   3. LADO DE LA IMAGEN (Izquierda)
+   ========================================= */
+.image-side {
+    flex: 1; /* Toma la mitad de la pantalla */
+    position: relative;
+    /* Imagen tecnológica genérica cargada desde Unsplash */
+    background: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;/*imagen dellado izquierdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--bg-page);
+    opacity: 0.8;
+    mix-blend-mode: multiply; /* Mezcla el color oscuro con la imagen */
+}
+
+/* Tinte dinámico según el tema */
+.image-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--image-tint);
+    transition: background-color 0.3s ease;
+}
+
+.image-content {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    max-width: 400px;
+}
+
+.image-content h2 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.image-content p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+
+/* =========================================
+   4. LADO DEL FORMULARIO (Derecha)
+   ========================================= */
+.form-side {
+    flex: 1; /* Toma la otra mitad */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-page);
+    position: relative;
+}
+
+/* Top Bar con Selector de Tema */
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 40px;
+}
+
+.theme-selector {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--bg-input);
+    padding: 5px 8px;
+    border-radius: 40px;
+    border: 1px solid var(--border-color);
+}
+
+.theme-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin: 0 10px 0 5px;
+}
+
+.main-theme-dot {
+    background: var(--accent-color);
+    box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.theme-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.theme-btn.active { 
+    background: var(--accent-color);
+    color: var(--active-btn-text);
+    font-weight: bold; 
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.theme-btn.active .dot { display: none; }
+.dot.cyber { background: #00ff7f; }
+.dot.corp { background: #0d8ca1; }
+.dot.red { background: #f43f5e; }
+
+/* Contenedor del Formulario */
+.login-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 400px;
+}
+
+.brand-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid var(--accent-color);
+    border-radius: 12px;
+    color: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.brand-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: var(--text-main);
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+/* Campos de entrada */
+.form-group { margin-bottom: 25px; }
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.label-row label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.security-badge {
+    font-size: 0.65rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    color: var(--text-muted);
+}
+
+.input-wrapper input {
+    width: 100%;
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 14px 15px 14px 45px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.input-wrapper input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 30px;
+}
+
+.checkbox-container {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkbox-container input {
+    accent-color: var(--accent-color);
+}
+
+.forgot-link, .signup-link {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.forgot-link:hover, .signup-link:hover { color: var(--accent-color); }
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--accent-color);
+    color: var(--active-btn-text);
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.btn-submit:hover { transform: translateY(-2px); }
+
+.form-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.signup-link { color: var(--accent-color); font-weight: bold; }
+
+.terminal-footer {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
+/* Modo Responsive para celulares */
+@media (max-width: 900px) {
+    .split-layout { flex-direction: column; height: auto; }
+    body { overflow: auto; }
+    .image-side { display: none; } /* Ocultamos la imagen en celular para priorizar el login */
+    .form-side { min-height: 100vh; }
+}
+
+
+/* =========================================
+   3. LADO DE LA IMAGEN (Izquierda)
+   ========================================= */
+.image-side {
+    flex: 1; /* Hace que este bloque ocupe el 50% de la pantalla */
+    position: relative; /* Necesario para que la capa superpuesta (overlay) funcione */
+    background: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; /* Fondo */
+    
+    /* PROPIEDADES DE CENTRADO (FLEXBOX) */
+    display: flex; /* Activa el modelo de caja flexible */
+    flex-direction: column; /* Apila los elementos de arriba hacia abajo */
+    justify-content: center; /* Centra el contenido VERTICALMENTE */
+    align-items: center; /* Centra el contenido HORIZONTALMENTE */
+    padding: 50px; /* Margen interno para que no toque los bordes */
+}
+
+/* Capa oscura que tiñe la imagen de fondo */
+.image-overlay {
+    position: absolute; /* Se posiciona sobre el fondo */
+    top: 0; left: 0; right: 0; bottom: 0; /* Ocupa todo el alto y ancho */
+    background: var(--bg-page); /* Toma el color de fondo del tema actual */
+    opacity: 0.8; /* Nivel de transparencia de la capa oscura */
+    mix-blend-mode: multiply; /* Mezcla el color con la imagen base */
+}
+
+/* Tinte de color extra (Verde, Azul o Rojo) que cambia con el tema */
+.image-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: var(--image-tint); /* Variable del color del tema */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de tema */
+}
+
+/* Contenedor del texto (Logo, Título y Párrafo) */
+.image-content {
+    position: relative; /* Lo pone por encima de la capa oscura (overlay) */
+    z-index: 10; /* Fuerza a que esté en un nivel superior visualmente */
+    color: #fff; /* Color del texto general */
+    max-width: 450px; /* Ancho máximo para que el texto no se estire demasiado */
+    
+    /* PROPIEDADES DE CENTRADO INTERNO */
+    display: flex; /* Activa flexbox interno */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra el logo, título y puntos horizontalmente */
+    text-align: center; /* Centra el texto de los párrafos */
+}
+
+/* Estilo para el icono del escudo en el lado izquierdo */
+.left-logo-icon {
+    font-size: 2.5rem; /* Tamaño del icono */
+    margin-bottom: 20px; /* Separación con el título */
+    display: inline-block;
+    padding: 15px 20px; /* Espacio interior del recuadro */
+    border: 2px solid var(--accent-color); /* Borde con el color del tema */
+    border-radius: 15px; /* Bordes redondeados */
+    color: var(--accent-color); /* Color del icono */
+    box-shadow: 0 0 15px var(--accent-glow); /* Brillo tipo neón */
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+}
+
+/* Título principal de la imagen */
+.image-content h2 {
+    font-size: 3.5rem; /* Tamaño de letra gigante */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    margin-bottom: 15px; /* Separación con el párrafo inferior */
+    text-shadow: 0 0 20px rgba(0,0,0,0.9); /* Sombra oscura para que resalte sobre el fondo */
+}
+
+/* Párrafo descriptivo */
+.image-content p {
+    font-size: 1.1rem; /* Tamaño mediano */
+    color: #cccccc; /* Gris claro */
+    line-height: 1.5; /* Espacio entre líneas para mejor lectura */
+}
+
+/* Contenedor de los 3 puntitos de colores */
+.dots-container {
+    margin-top: 30px; /* Separación del párrafo superior */
+    display: flex; /* Alinea los puntos en una fila */
+    gap: 10px; /* Separación exacta entre cada punto */
+    justify-content: center; /* Centra los puntos perfectamente */
+}
+
+
+
+/* Contenedor Flex para alinear imagen y texto perfectamente al centro */
+.logo-container {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    gap: 15px; /* Espacio de separación entre el escudo y la palabra */
+}
+
+/* Ajustes del escudo */
+.logo-img {
+    height: 90px; /* Aumenta este valor si lo quieres aún más grande */
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: screen; /* TRUCO: Hace invisible el fondo negro del JPG */
+}
+
+/* Ajustes del texto para que luzca organizado y profesional */
+.logo-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px; /* Separa un poco las letras */
+    margin-top: 5px; /* Ajuste fino por si la fuente no queda 100% centrada a la vista */
+}

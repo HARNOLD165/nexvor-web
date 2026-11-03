@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXVOR</title>
+    <link rel="stylesheet" href="servicios.css">
+</head>
+<body class="theme-cyberpunk">
+
+    <!-- CABECERA PRINCIPAL -->
+    <header class="main-header">
+        <div class="logo-container">
+           <img src="imagenes/2logo.jpg" alt="Nexvor Cyber Defense" class="logo-img">
+           <span class="logo-text">NEXVOR</span>
+       </div>
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="sobrenosotros.html">Sobre Nosotros</a>
+            <a href="contacto.html" class="nav-active">Contacto</a>
+        </nav>
+        <div class="header-actions">
+            <div class="theme-selector">
+                <button class="theme-btn active" onclick="setTheme('cyberpunk')"><span class="dot cyber"></span> CYBERPUNK</button>
+                <button class="theme-btn" onclick="setTheme('corporate')"><span class="dot corp"></span> CORP</button>
+                <button class="theme-btn" onclick="setTheme('redteam')"><span class="dot red"></span> RED TEAM</button>
+            </div>
+            <button class="btn-portal">💻 CLIENT PORTAL</button>
+        </div>
+    </header>
+
+    <div class="sub-header">
+        <div><span class="accent-text">🛡</span> // ESTADO CRIPTOGRÁFICO VERIFICADO</div>
+        <div>SESSION ID: 0X8F4E-91CA-B3D9 &nbsp;&nbsp; ENCLAVE: ZURICH-VAULT-01</div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contact-main">
+        
+        <header class="contact-hero">
+            <h1>ESTABLECER COMUNICACIÓN SEGURA <span class="accent-text">// ENCLAVE CIFRADO</span></h1>
+            <p>Canal de reporte de vulnerabilidades críticas, solicitud de auditorías tácticas y activación prioritaria del Equipo de Respuesta a Incidentes de Emergencia (CIRT). Toda transmisión es sellada mediante criptografía de curva elíptica de grado defensa.</p>
+        </header>
+
+        <!-- BARRA DE TELEMETRÍA -->
+        <div class="telemetry-bar">
+            <div class="telemetry-card">
+                <span class="t-icon">🔑</span>
+                <div>
+                    <span class="t-label">PGP ENCLAVE MASTER</span>
+                    <span class="t-value accent-text">ONLINE •</span>
+                </div>
+            </div>
+            <div class="telemetry-card">
+                <span class="t-icon">⚡</span>
+                <div>
+                    <span class="t-label">LATENCIA TLS 1.3</span>
+                    <span class="t-value">18 ms <span style="font-size:0.7rem; color:var(--text-secondary)">(Zurich Edge)</span></span>
+                </div>
+            </div>
+            <div class="telemetry-card">
+                <span class="t-icon">⏱</span>
+                <div>
+                    <span class="t-label">SLA RESPUESTA CIRT</span>
+                    <span class="t-value accent-text">< 4 MIN <span style="font-size:0.7rem;">EMERGENCIA</span></span>
+                </div>
+            </div>
+            <div class="telemetry-card">
+                <span class="t-icon">🛡</span>
+                <div>
+                    <span class="t-label">RETENCIÓN DE LOGS IP</span>
+                    <span class="t-value">0 DÍAS <span style="font-size:0.7rem; color:var(--text-secondary)">(In-Memory Wipe)</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-grid">
+            <!-- PANEL IZQUIERDO: FORMULARIO -->
+            <div class="secure-form-panel">
+                <div class="panel-header">
+                    <h2><span class="accent-text">🔒</span> FORMULARIO DE TRANSMISIÓN CIFRADA</h2>
+                    <span class="accent-tag">AES-256-GCM // ZERO KNOWLEDGE</span>
+                </div>
+
+                <form class="tactical-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>IDENTIFICADOR / OPERADOR O ENTIDAD *</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">🏢</span>
+                                <input type="text" placeholder="ej. CISO / Redacted Corp">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>CORREO CORPORATIVO / PGP KEY ID *</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">@</span>
+                                <input type="email" placeholder="secops@entidad-objetivo.com">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>VECTOR / TIPO DE REQUERIMIENTO OPERATIVO *</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🎯</span>
+                            <select>
+                                <option>Auditoría Táctica / Red Teaming & Pentesting Ofensivo</option>
+                                <option>Respuesta a Incidentes (CIRT) / Análisis Forense</option>
+                                <option>Threat Intelligence / Monitoreo Dark Web</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="defcon-header">
+                            <label>CLASIFICACIÓN DE AMENAZA / NIVEL DE URGENCIA</label>
+                            <span class="defcon-status">DEFCON 4: RUTINARIO</span>
+                        </div>
+                        <div class="defcon-selector">
+                            <label class="defcon-option active">
+                                <input type="radio" name="defcon" checked>
+                                <span class="d-level">DEFCON 4</span>
+                                <span class="d-title">Rutinario</span>
+                                <span class="d-desc">Auditoría planificada sin incidente en curso.</span>
+                            </label>
+                            <label class="defcon-option">
+                                <input type="radio" name="defcon">
+                                <span class="d-level">DEFCON 3</span>
+                                <span class="d-title">Preventivo</span>
+                                <span class="d-desc">Anomalía en tráfico o IoC detectado en perímetro.</span>
+                            </label>
+                            <label class="defcon-option alert">
+                                <input type="radio" name="defcon">
+                                <span class="d-level">DEFCON 1</span>
+                                <span class="d-title accent-text">EMERGENCIA CIRT</span>
+                                <span class="d-desc">Exfiltración activa, ransomware o compromiso de dominio.</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="defcon-header">
+                            <label>CARGA DE TELEMETRÍA, PCAP O LOGS DE AUDITORÍA (OPCIONAL)</label>
+                            <span class="accent-tag" style="font-size:0.65rem;">AUTO SHA-256 HASHING</span>
+                        </div>
+                        <div class="file-dropzone">
+                            <span class="drop-icon accent-text">☁️</span>
+                            <p>Haga clic o arrastre archivos de evidencias (.log, .pcap, .json, .zip)</p>
+                            <span class="drop-note">Los archivos son cifrados localmente antes de iniciar la transmisión en enclave seguro (Máx 50MB).</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>DESCRIPCIÓN DETALLADA DEL REQUERIMIENTO / VECTOR *</label>
+                        <textarea rows="5" placeholder="Detalle el alcance de los activos objetivos, rangos IP/CIDR, síntomas de intrusión detectados o marco temporal de ejecución..."></textarea>
+                    </div>
+
+                    <div class="form-checkboxes">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            Cifrar automáticamente este mensaje con la llave pública RSA/PGP de AegisSec antes del despacho de paquete HTTP/3.
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Acepto el acuerdo estándar de no divulgación bilateral (NDA) y confirmo la legitimidad de autorización sobre los sistemas listados.
+                        </label>
+                    </div>
+
+                    <button type="button" class="btn-submit">🔒 TRANSMITIR MENSAJE CIFRADO</button>
+                </form>
+            </div>
+
+            <!-- PANEL DERECHO: SIDEBAR INFORMATIVO -->
+            <aside class="contact-sidebar">
+                
+                <!-- Hotline -->
+                <div class="sidebar-panel">
+                    <div class="panel-header-small">
+                        <span>LÍNEA DE INCIDENTES CRÍTICOS (CIRT)</span>
+                        <span class="badge">24/7/365</span>
+                    </div>
+                    <h3>¿Brecha Activa o Exfiltración en Progreso?</h3>
+                    <p class="panel-desc">Línea telefónica encriptada y sala de crisis directa para activación instantánea de analistas de contención y forense digital.</p>
+                    <div class="hotline-box">
+                        <div class="hotline-row">
+                            <span>📞 Hotline Voz Segura:</span>
+                            <strong>+34 910 889 100</strong>
+                        </div>
+                        <div class="hotline-row">
+                            <span>💬 Signal / Wire Enclave:</span>
+                            <strong class="accent-text">@aegissec_cirt.01</strong>
+                        </div>
+                    </div>
+                    <div class="availability">
+                        <span>Disponibilidad Inmediata:</span>
+                        <span class="accent-text">12 Especialistas On-Duty</span>
+                    </div>
+                </div>
+
+                <!-- PGP Key -->
+                <div class="sidebar-panel">
+                    <div class="panel-header-small" style="justify-content: space-between; border-bottom: none; margin-bottom:0;">
+                        <span>🔑 LLAVE PÚBLICA PGP DE AEGISSEC</span>
+                        <button class="btn-copy">📋 COPIAR</button>
+                    </div>
+                    <p class="pgp-fingerprint">FINGERPRINT OFICIAL (4096R):<br>
+                        <strong>F82A 4B91 00C3 9E12 77BA B031 DA59 EF88 3C90 1142</strong>
+                    </p>
+                    <textarea class="pgp-block" readonly>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: AegisSec CryptoVault v4.2.1
+Comment: https://aegissec.defense/pgp-verify
+
+mQGNBF+cRvwBDADg8m910Y7u7wYQ0pC0sD3q12389fja...
+kLs98a88vCnm123490zxcbMNDOIIEQW98234yhfkSad...
+789123849zmnbvcxiopWERTYUIOPASDFGHJKLZXCVBN...
+-----END PGP PUBLIC KEY BLOCK-----</textarea>
+                </div>
+
+                <!-- Hubs -->
+                <div class="sidebar-panel">
+                    <div class="panel-header-small">
+                        <span>COORDENADAS DE ENCLAVES & SOC HUBS</span>
+                        <span>🌍</span>
+                    </div>
+                    <div class="hub-list">
+                        <div class="hub-item">
+                            <div class="hub-tag">MAD</div>
+                            <div class="hub-info">
+                                <strong>Madrid Defense Enclave <span class="hub-region">EMEA & LATAM HUB</span></strong>
+                                <p>Paseo de la Castellana 216, Torre de Ciberinteligencia</p>
+                                <span class="hub-status">SOC TIER-3 OPERATIVO</span>
+                            </div>
+                        </div>
+                        <div class="hub-item">
+                            <div class="hub-tag">VA</div>
+                            <div class="hub-info">
+                                <strong>Virginia Cyber Vault <span class="hub-region">NORTH AMERICA</span></strong>
+                                <p>Tysons Corner Tech Corridor, McLean, VA 22102</p>
+                                <span class="hub-status">DOD COMPLIANT FACILITY</span>
+                            </div>
+                        </div>
+                        <div class="hub-item">
+                            <div class="hub-tag">ZUR</div>
+                            <div class="hub-info">
+                                <strong>Zurich Alpine Vault <span class="hub-region">CONFIDENTIAL VAULT</span></strong>
+                                <p>Gotthard Bunker Infrastructure, Suiza</p>
+                                <span class="hub-status accent-text">AIR-GAPPED DATA DEPOSIT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- FAQ TÁCTICO -->
+        <section class="faq-section">
+            <h2 class="faq-title">PREGUNTAS FRECUENTES DE COMUNICACIÓN TÁCTICA</h2>
+            <p class="faq-subtitle">Procedimientos estandarizados para el tratamiento de vectores críticos, contratación de servicios y protección jurídica del remitente.</p>
+            
+            <div class="faq-grid">
+                <div class="faq-card">
+                    <h3 class="accent-text">📄 ¿Qué sucede tras emitir una alerta DEFCON 1?</h3>
+                    <p>Se dispara de inmediato una interrupción de canal en nuestro SOC. Un Comandante de Incidentes CIRT asigna un canal de voz cifrado (Signal o enlace satelital) en menos de 4 minutos para iniciar contención activa del perímetro.</p>
+                </div>
+                <div class="faq-card">
+                    <h3 class="accent-text">🕵️ ¿Puedo transmitir de forma totalmente anónima?</h3>
+                    <p>Sí. Puede indicar un alias temporal y una llave PGP pública desechable o dirección de buzón Proton/Tuta. No registramos direcciones IP de origen ni huellas de agente de usuario HTTP.</p>
+                </div>
+                <div class="faq-card">
+                    <h3 class="accent-text">⚖️ ¿Cómo se formaliza un acuerdo de confidencialidad (NDA)?</h3>
+                    <p>El envío de este formulario aplica de forma recíproca las condiciones de Safe Harbor y NDA de AegisSec. Si su organización requiere un formato corporativo específico, adjúntelo en el módulo de telemetría para firma de nuestros asesores jurídicos.</p>
+                </div>
+                <div class="faq-card">
+                    <h3 class="accent-text">⚡ ¿Realizan pruebas en entornos productivos?</h3>
+                    <p>Todas nuestras auditorías de Red Team operan bajo estrictas Reglas de Enfrentamiento (RoE). Minimizamos el riesgo operacional con ventanas de ejecución controladas y monitorización de disponibilidad en tiempo real.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="main-footer">
+        <div><span class="footer-logo">AEGISSEC</span> <span class="version">v4.2.0</span></div>
+        <div class="footer-links">
+            <a href="#">Gobernanza & Legal</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Comunidad SOC</a>
+        </div>
+        <div>CLASSIFIED TIER-3 <span style="margin-left: 10px; color:var(--text-secondary)">LATAM & GLOBAL INTEL HUB</span></div>
+    </footer>
+
+    <script>
+        function setTheme(theme) {
+            document.body.className = 'theme-' + theme;
+            document.querySelectorAll('.theme-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>

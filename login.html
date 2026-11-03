@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - NEXVOR</title>
+    <link rel="stylesheet" href="inicio.css">
+</head>
+<body>
+
+    <div class="split-layout">
+        
+        
+            <!-- LADO IZQUIERDO: IMAGEN COMPLETA -->
+    <div class="image-side">
+    <!-- Capa de color semitransparente que cubre la imagen -->
+        <div class="image-overlay"></div>
+    
+    <!-- Contenedor de los textos y logos (AQUÍ APLICAMOS EL CENTRADO) -->
+        <div class="image-content">
+        
+        <!-- Icono del escudo (agregado según tu captura de pantalla) -->
+        <img src="imagenes/2logo.jpg" alt="Nexvor Cyber Defense" class="logo-img">
+        
+        <!-- Título principal -->
+        <h2>NEXVOR</h2>
+        
+        <!-- Subtítulo -->
+        <p>Infraestructura de defensa y monitoreo avanzado.</p>
+        
+        <!-- Contenedor de los puntos de terminal (ahora centrado) -->
+            <div class="terminal-dots dots-container">
+               <div class="dot" style="background: #ff5f56;"></div>
+               <div class="dot" style="background: #ffbd2e;"></div>
+               <div class="dot" style="background: #27c93f;"></div>
+           </div>
+        </div>
+    </div>
+
+        <!-- LADO DERECHO: FORMULARIO Y TEMAS -->
+        <div class="form-side">
+            
+            <!-- Selector de Temas (Arriba a la derecha) -->
+            <div class="top-bar">
+                <div class="theme-selector">
+                    <span class="theme-label"><span class="dot main-theme-dot"></span></span>
+                    <button class="theme-btn active" onclick="setTheme('cyberpunk', this)">
+                        <span class="dot cyber"></span> Cyberpunk
+                    </button>
+                    <button class="theme-btn" onclick="setTheme('corporate', this)">
+                        <span class="dot corp"></span> Corporativo
+                    </button>
+                    <button class="theme-btn" onclick="setTheme('redteam', this)">
+                        <span class="dot red"></span> Red Team
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Contenedor Central del Login -->
+            <div class="login-container">
+                
+
+                <form id="loginForm" class="login-form">
+                    <!-- Campo: Correo / ID -->
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="userId">Correo Electrónico / ID de Operador</label>
+                            <span class="security-badge">SEC-ID</span>
+                        </div>
+                        <div class="input-wrapper">
+                            <span class="input-icon">👤</span>
+                            <input type="text" id="userId" placeholder="operador@aegissec.com" required>
+                        </div>
+                    </div>
+
+                    <!-- Campo: Contraseña -->
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="password">Clave de Cifrado</label>
+                            <span class="security-badge">ENC-PASS</span>
+                        </div>
+                        <div class="input-wrapper">
+                            <span class="input-icon">🔒</span>
+                            <input type="password" id="password" placeholder="••••••••••••••" required>
+                            <button type="button" class="toggle-password" id="togglePassword">👁️</button>
+                        </div>
+                    </div>
+
+                    <!-- Opciones adicionales -->
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="remember">
+                            <span class="checkmark"></span>
+                            Recordar conexión
+                        </label>
+                        <a href="#" class="forgot-link">¿Olvidaste tu clave?</a>
+                    </div>
+
+                    <!-- Botón Principal -->
+                    <button type="submit" class="btn-submit">
+                        INICIAR SESIÓN SEGURA
+                    </button>
+
+                    <div class="form-footer">
+                        ¿No tienes acceso? <a href="#" class="signup-link">Solicita una cuenta</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Footer del form -->
+            <div class="terminal-footer">
+                PROTOCOLO AES-256 ACTIVO // LATENCIA: 14ms
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXVOR</title>
+    <!-- Importing a clean sans-serif font -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="java.js">
+
+
+</head>
+<body>
+
+    <header>
+       <div class="logo-container">
+           <img src="imagenes/2logo.jpg" alt="Nexvor Cyber Defense" class="logo-img">
+           <span class="logo-text">NEXVOR</span>
+       </div>
+        <nav>
+            <a href="index.html" class="nav-active">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="sobrenosotros.html">Sobre Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        
+        <div class="header-actions">
+            <!-- Selector de temas -->
+            <div class="theme-selector">
+                <span class="theme-label">
+                    <!-- El color principal de los puntos se gestiona automáticamente mediante var(--accent-color) en CSS. -->
+                    <span class="dot main-dot"></span>
+                </span>
+                
+                <!-- Tema activo predeterminado -->
+                <button class="theme-btn active" onclick="setTheme('cyberpunk', this)">
+                    <span class="dot cyber"></span> Cyberpunk
+                </button>
+                <button class="theme-btn" onclick="setTheme('corporate', this)">
+                    <span class="dot corp"></span> Corporativo
+                </button>
+                <button class="theme-btn" onclick="setTheme('redteam', this)">
+                    <span class="dot red"></span> Red Team
+                </button>
+            </div>
+
+            <a href="login.html" class="btn-login" style="text-decoration: none;">Iniciar Sesión</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero-text">
+            <div class="badge">
+                <span class="badge-dot"></span> SISTEMAS CRÍTICOS BLINDADOS • SOC 24/7
+            </div>
+            
+            <h1>Blindaje Total de Datos frente a <br><span>Amenazas Avanzadas</span></h1>
+            
+            <p class="description">
+                Protegemos infraestructuras empresariales contra filtraciones, ataques de ransomware y vectores de intrusión sofisticados antes de que impacten su operación.
+            </p>
+            
+            <div class="buttons">
+                <button class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    Solicitar Auditoría
+                </button>
+                <button class="btn btn-secondary">Ver Capacidades</button>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>99.99<span>%</span></h3>
+                    <p>Mitigación Zero-Day</p>
+                </div>
+                <div class="stat-item">
+                    <h3>&lt; 8<span>min</span></h3>
+                    <p>Respuesta a Incidentes</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500<span>+</span></h3>
+                    <p>Auditorías Ejecutadas</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                </div>
+                <div class="terminal-title">aegis-sentinel-v4.2 // live-stream</div>
+                <div class="text-accent enc-label">[ENC-256]</div>
+            </div>
+            
+            <div class="terminal-content">
+                <div class="log">[+] Inicializando perímetro AegisShield...</div>
+                <div class="log">[√] Políticas Zero-Trust activas: <span class="text-accent">100% OPERACIONAL</span></div>
+                <div class="log">[i] Inspeccionando paquetes de red cifrados (TLS 1.3)...</div>
+                <div class="log text-accent">[!] Intrusión neutralizada en puerto 443 [Mitre ATT&CK T1190]</div>
+                
+                <div class="health-bar-container">
+                    <div class="health-bar-title">
+                        <span>ÍNDICE DE SALUD DE INFRAESTRUCTURA</span>
+                        <span class="text-accent">SEGURO (98.4%)</span>
+                    </div>
+                    <div class="health-bar">
+                        <div class="health-fill"></div>
+                    </div>
+                </div>
+                
+                <div class="log monitor-log">
+                    > Monitoreando vector global de amenazas en tiempo real_
+                </div>
+            </div>
+        </div>
+    </main>
+
+     <script>
+        /**
+         * Cambia el tema activo de la página de destino. 
+         * @param {string} themeName - 'cyberpunk', 'corporate' o 'redteam'
+         * @param {HTMLElement} clickedButton - El elemento de botón sobre el que se hizo clic
+         */
+        function setTheme(themeName, clickedButton) {
+            // 1. Reset themes on the body tag
+            document.body.classList.remove('theme-corporate', 'theme-redteam');
+            
+            // 2. Apply the new theme class if it's not the default (cyberpunk)
+            if (themeName === 'corporate') {
+                document.body.classList.add('theme-corporate');
+            } else if (themeName === 'redteam') {
+                document.body.classList.add('theme-redteam');
+            }
+            
+            // 3. Handle Active Button States
+            // Remove 'active' class from all buttons
+            const allButtons = document.querySelectorAll('.theme-btn');
+            allButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add 'active' class to the clicked button
+            clickedButton.classList.add('active');
+            
+            // Note: The specific styling (background pill color, text contrast, 
+            // hiding the internal dot, and updating the main TEMA dot) 
+            // is handled automatically via CSS variables tied to the body class 
+            // and the .active state on the button.
+        }
+    </script>
+   
+</body>
+</html>

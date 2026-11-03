@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - NEXVOR</title>
+    <!-- Usa tu archivo CSS principal aquí -->
+    <link rel="stylesheet" href="sobrenosotros.css"> 
+</head>
+<body>
+
+    <!-- CABECERA PRINCIPAL -->
+    <header class="main-header">
+       <div class="logo-container">
+           <img src="imagenes/2logo.jpg" alt="Nexvor Cyber Defense" class="logo-img">
+           <span class="logo-text">NEXVOR</span>
+       </div>
+        
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="sobrenosotros.html" class="nav-active">Sobre Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        
+        <div class="header-actions">
+            <!-- Selector de Temas -->
+            <div class="theme-selector">
+                <button class="theme-btn active" onclick="setTheme('cyberpunk', this)">
+                    <span class="dot cyber"></span> CYBERPUNK
+                </button>
+                <button class="theme-btn" onclick="setTheme('corporate', this)">
+                    <span class="dot corp"></span> CORP
+                </button>
+                <button class="theme-btn" onclick="setTheme('redteam', this)">
+                    <span class="dot red"></span> RED TEAM
+                </button>
+            </div>
+            <button class="btn-portal">🖥️ CLIENT PORTAL</button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="about-main">
+        
+        <!-- HERO SECTION: FORJADOS EN LA TRINCHERA -->
+        <section class="about-hero-section">
+            <div class="about-hero-content">
+                <div class="hero-subtitle">
+                    <span class="accent-text">  ORIGEN TÁCTICO & INTELIGENCIA DEFENSIVA & OFENSIVA</span>
+                </div>
+                <h1>FORJADOS EN LA<br>TRINCHERA DIGITAL</h1>
+                <p class="hero-desc">
+                    Nacidos como un destacamento de contratistas para inteligencia militar, AegisSec opera en el nexo entre la criptografía militar, el combate asimétrico y la ciberresiliencia de alta disponibilidad. Protegemos los sistemas nerviosos de corporaciones globales y soberanías críticas.
+                </p>
+                <div class="about-hero-badges">
+                    <span class="badge-outline"><span class="accent-text">STATUS:</span> ACTIVE THREAT COMBAT</span>
+                    <span class="badge-outline"><span class="accent-text">DIRECTIVA:</span> DEFENSA SIN FRICCIÓN</span>
+                </div>
+            </div>
+            <div class="about-hero-image">
+                <!-- Representación visual del centro de comando (Placeholder) -->
+                <div class="image-placeholder">
+                    <div class="live-feed-badge"><span class="dot red"></span> SOC LIVE FEED / LATAM SECTOR 4</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISIÓN & TRAYECTORIA -->
+        <section class="section-container">
+            <div class="section-header">
+                <span class="section-tag">DOCTRINA INSTITUCIONAL</span>
+                <h2>MISIÓN & TRAYECTORIA OPERATIVA</h2>
+            </div>
+            <div class="mission-grid">
+                <!-- Misión -->
+                <div class="mission-card">
+                    <div class="mission-icon">🛡️</div>
+                    <h3>NUESTRA MISIÓN</h3>
+                    <p>Proteger infraestructuras críticas globales contra vectores de amenaza persistentes avanzadas (APT), garantizando la continuidad soberana de operaciones de misión crítica y blindando la confidencialidad, integridad y disponibilidad ante adversarios de clase estado-nación.</p>
+                </div>
+                <!-- Historia -->
+                <div class="mission-card">
+                    <div class="mission-icon">📜</div>
+                    <h3>NUESTRA HISTORIA & VISIÓN</h3>
+                    <p>Fundada por un colectivo de ex-analistas de inteligencia militar, operadores de operaciones especiales cibernéticas e investigadores de seguridad de élite que transforman doctrinas de defensa reactivas en resiliencia activa e inteligencia de amenazas asimétrica.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MÉTRICAS DE RESILIENCIA -->
+        <section class="section-container">
+            <div class="section-header">
+                <span class="section-tag">TELEMETRÍA DE IMPACTO OPERACIONAL</span>
+                <h2>MÉTRICAS DE RESILIENCIA EN COMBATE</h2>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-id">MÉTRICA 01</span>
+                    <h3 class="metric-number">12+</h3>
+                    <p class="metric-label">AÑOS DE OPERACIÓN</p>
+                    <p class="metric-desc">Experiencia ininterrumpida protegiendo infraestructura de alta criticidad a nivel global.</p>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-id">MÉTRICA 02</span>
+                    <h3 class="metric-number accent-text">4,500+</h3>
+                    <p class="metric-label">INCIDENTES NEUTRALIZADOS</p>
+                    <p class="metric-desc">Ataques complejos contenidos y vectores Zero-Day remediados sin interrupción operativa.</p>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-id">MÉTRICA 03</span>
+                    <h3 class="metric-number">99.99%</h3>
+                    <p class="metric-label">RESILIENCIA PERIMETRAL</p>
+                    <p class="metric-desc">Disponibilidad sostenida en entornos atacados bajo regímenes continuos de estrés y DDoS.</p>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-id">MÉTRICA 04</span>
+                    <h3 class="metric-number accent-text">&lt; 4 min</h3>
+                    <p class="metric-label">RESPUESTA CIRT / SLA</p>
+                    <p class="metric-desc">Tiempo promedio de contención táctica y despliegue del equipo de emergencia ante anomalías críticas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EQUIPO DE COMANDO -->
+        <section class="section-container">
+            <div class="section-header">
+                <span class="section-tag">ALTO MANDO TÁCTICO</span>
+                <h2>EL EQUIPO DE COMANDO</h2>
+            </div>
+            <div class="team-grid">
+                <!-- Miembro 1 -->
+                <div class="team-card">
+                    <div class="team-header">
+                        <span class="clearance">CLEARANCE: LEVEL 5 (SECRET)</span>
+                        <span class="id">EX-OP-01</span>
+                    </div>
+                    <div class="team-profile">
+                        <div class="team-avatar">MV</div>
+                        <div>
+                            <h3>Marcus Vance</h3>
+                            <p class="team-role accent-text">Chief Executive Officer (CEO)</p>
+                        </div>
+                    </div>
+                    <p class="team-bio">Ex Director de Operaciones Cibernéticas gubernamentales. Experto en modelado nacional de infraestructuras críticas y diseño de arquitecturas Zero-Trust globales.</p>
+                    <div class="card-tags">
+                        <span>Zero-Trust Architect</span><span>Threat Intel Defend</span>
+                    </div>
+                </div>
+
+                <!-- Miembro 2 -->
+                <div class="team-card">
+                    <div class="team-header">
+                        <span class="clearance">SPECIALTY: OFFENSIVE ESCALATION</span>
+                        <span class="id">EX-OP-02</span>
+                    </div>
+                    <div class="team-profile">
+                        <div class="team-avatar">ER</div>
+                        <div>
+                            <h3>Elena Rostova</h3>
+                            <p class="team-role accent-text">VP of Offensive Ops (Red Team)</p>
+                        </div>
+                    </div>
+                    <p class="team-bio">Especialista en ingeniería inversa de malware complejo de estado-nación y simulación de adversarios APT. Líder de campañas de simulación hostil en red ciega.</p>
+                    <div class="card-tags">
+                        <span>Reverse Engineering</span><span>Exploit Dev</span>
+                    </div>
+                </div>
+
+                <!-- Miembro 3 -->
+                <div class="team-card">
+                    <div class="team-header">
+                        <span class="clearance">FOCUS: FORENSIC TRIAGE & RECOV</span>
+                        <span class="id">EX-OP-03</span>
+                    </div>
+                    <div class="team-profile">
+                        <div class="team-avatar">DC</div>
+                        <div>
+                            <h3>David Chen</h3>
+                            <p class="team-role accent-text">Lead Digital Forensics (DFIR)</p>
+                        </div>
+                    </div>
+                    <p class="team-bio">Pionero en análisis forense volátil de memoria RAM, criptoanálisis y la gestión de contención de amenazas predictivas ante intrusiones sigilosas de día cero.</p>
+                    <div class="card-tags">
+                        <span>Volatile Memory IR</span><span>Cryptanalysis</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MANIFIESTO Y PRINCIPIOS -->
+        <section class="section-container">
+            <div class="section-header">
+                <span class="section-tag">CÓDIGO DE CONDUCTA Y VALORES</span>
+                <h2>MANIFIESTO & PRINCIPIOS OPERACIONALES</h2>
+            </div>
+            <div class="principles-grid">
+                <div class="principle-item">
+                    <h4 class="accent-text">🛡️ Zero-Trust Absoluto</h4>
+                    <p>Ningún actor, identidad o segmento interno goza de confianza implícita. Verificamos criptográficamente cada acceso y en cada capa de la pila tecnológica.</p>
+                </div>
+                <div class="principle-item">
+                    <h4 class="accent-text">⚡ Respuesta Asimétrica</h4>
+                    <p>Ante hostilidades sobre la infraestructura, desplegamos contramedidas activas para obligar al adversario a cometer errores antes de que consolide su pivote de mando.</p>
+                </div>
+                <div class="principle-item">
+                    <h4 class="accent-text">🔒 Confidencialidad Estricta</h4>
+                    <p>Tratamos la telemetría del cliente como data clasificada. Empleamos ofuscación y canalización encriptada en reposo, tránsito y computación.</p>
+                </div>
+                <div class="principle-item">
+                    <h4 class="accent-text">🔭 Innovación Proactiva</h4>
+                    <p>Investigamos vectores de amenaza emergentes (Quantum Cryptography Breaking, IA Maliciosa) para diseñar defensas antes de su proliferación pública.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LLAMADA A LA ACCIÓN (CTA) -->
+        <section class="cta-section" style="margin-top: 50px;">
+            <div class="cta-content">
+                <div class="cta-icon">?</div>
+                <div class="cta-text">
+                    <span class="cta-subtitle">DISPONIBILIDAD INMEDIATA DE EVALUACIÓN</span>
+                    <h2>¿PREPARADO PARA BLINDAR SUS OPERACIONES CON EL EQUIPO DE AEGISSEC?</h2>
+                    <p>Nuestros operadores tácticos están listos para ejecutar ejercicios de simulación hostil, auditorías de resiliencia Zero-Trust y puesta en marcha de SOC dedicado.</p>
+                </div>
+            </div>
+            <div class="cta-actions">
+                <button class="btn-primary">📅 AGENDAR CONSULTA TÁCTICA</button>
+                <a href="servicios.html" class="btn-text">Ver Catálogo de Servicios</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <span class="logo-icon">🛡️</span> AegisSec <span class="version">v4.2.0-SECURE</span>
+        </div>
+        <div class="footer-copy">
+            © 2026 AegisSec Threat Intelligence & Cyber Defense. Todos los derechos reservados.
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacidad</a>
+            <a href="#">Términos</a>
+            <a href="#">Security Advisories</a>
+        </div>
+    </footer>
+
+    <!-- Tu script para el cambio de temas (Funciona igual aquí) -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - NEXVOR</title>
+    <link rel="stylesheet" href="servicios.css">
+</head>
+<body>
+
+    <!-- CABECERA PRINCIPAL -->
+    <header class="main-header">
+        <div class="logo-container">
+           <img src="imagenes/2logo.jpg" alt="Nexvor Cyber Defense" class="logo-img">
+           <span class="logo-text">NEXVOR</span>
+       </div>
+        
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html" class="nav-active">Servicios</a>
+            <a href="sobrenosotros.html">Sobre Nosotros</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        
+        <div class="header-actions">
+            <!-- Selector de Temas -->
+            <div class="theme-selector">
+                <button class="theme-btn active" onclick="setTheme('cyberpunk', this)">
+                    <span class="dot cyber"></span> CYBERPUNK
+                </button>
+                <button class="theme-btn" onclick="setTheme('corporate', this)">
+                    <span class="dot corp"></span> CORP
+                </button>
+                <button class="theme-btn" onclick="setTheme('redteam', this)">
+                    <span class="dot red"></span> RED TEAM
+                </button>
+            </div>
+            <button class="btn-portal">🖥️ CLIENT PORTAL</button>
+        </div>
+    </header>
+
+    
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="services-main">
+        
+        <!-- SECCIÓN HERO DE SERVICIOS -->
+        <section class="services-hero">
+            
+            <div class="hero-subtitle">
+               <span class="accent-text">  PORTAFOLIO TÁCTICO & SOLUCIONES ENTERPRISE</span>
+            </div>
+            <h1>Catálogo de Defensa Activa</h1>
+            <p class="hero-desc">
+                Blindaje integral de infraestructuras críticas, mitigación proactiva y operaciones altamente 
+                resilientes contra vectores de ataque persistentes avanzados (APT). Diseñado para 
+                escenarios donde el compromiso no es una opción.
+            </p>
+            
+            <div class="stats-row">
+                <div class="stat-box">
+                    <span class="stat-label">SLA RESPUESTA</span>
+                    <span class="stat-value accent-text">&lt; 5 MINUTOS</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">ESTÁNDAR SOC</span>
+                    <span class="stat-value">TIER 3 / 24-7</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">COMPLIANCE</span>
+                    <span class="stat-value">ISO • ENS • SOC2</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">COBERTURA</span>
+                    <span class="stat-value accent-text">HYBRID-CLOUD</span>
+                </div>
+            </div>
+        </section>
+
+       
+
+        <!-- GRID DE SERVICIOS -->
+        <section class="services-grid">
+            
+            <!-- TARJETA 1 -->
+            <div class="tactical-card">
+                <div class="card-header">
+                    <span class="mod-id">MOD://01-OFFENSIVE</span>
+                    <span class="mod-badge">OWASP TOP 10</span>
+                </div>
+                <div class="card-icon">💻</div>
+                <h3>Pentesting & Ethical Hacking</h3>
+                <p>Evaluación exhaustiva de intrusión en aplicaciones web, APIs críticas y entornos multinube bajo metodologías OWASP y NIST. Simulamos actores de amenaza reales para localizar y remediar brechas de día cero antes de que sean explotadas.</p>
+                <div class="card-tags">
+                    <span>Doble Ciego</span><span>API Fuzzing</span><span>Explotación PoC</span>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="details-link" onclick="openModal('pentesting'); return false;">Ver detalles <span>→</span></a>
+                    <span class="doc-ref">DOC://SPEC-PNT</span>
+                </div>
+            </div>
+
+            <!-- TARJETA 2 -->
+            <div class="tactical-card">
+                <div class="card-header">
+                    <span class="mod-id">MOD://02-SENTINEL</span>
+                    <span class="mod-badge active-badge"><span class="dot cyber"></span> ACTIVE FEED</span>
+                </div>
+                <div class="card-icon">🎯</div>
+                <h3>SOC & Vigilancia 24/7</h3>
+                <p>Monitoreo continuo de telemetría de red y endpoints. Correlación de eventos impulsada por modelos de inteligencia artificial y detección instantánea de anomalías en tiempo real, respaldada por un estricto SLA de respuesta inferior a 5 minutos.</p>
+                <div class="card-tags">
+                    <span>SIEM & XDR</span><span>Triaje IA</span><span>Threat Hunting</span>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="details-link" onclick="openModal('soc'); return false;">Ver detalles <span>→</span></a>
+                    <span class="doc-ref">DOC://SPEC-SOC</span>
+                </div>
+            </div>
+
+            <!-- TARJETA 3 -->
+            <div class="tactical-card">
+                <div class="card-header">
+                    <span class="mod-id">MOD://03-FORTRESS</span>
+                    <span class="mod-badge">FIDO2 / NIST 800-207</span>
+                </div>
+                <div class="card-icon">🔄</div>
+                <h3>Arquitectura Zero-Trust</h3>
+                <p>Diseño e implementación de microsegmentación dinámica este-oeste, autenticación robusta multi-factor mediante llaves criptográficas físicas FIDO2 y políticas de acceso bajo estricto principio de mínimo privilegio en perímetro extendido.</p>
+                <div class="card-tags">
+                    <span>Microsegmentación</span><span>FIDO2 Hardware</span><span>ZTNA Proxy</span>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="details-link" onclick="openModal('zerotrust'); return false;">Ver detalles <span>→</span></a>
+                    <span class="doc-ref">DOC://SPEC-ZTN</span>
+                </div>
+            </div>
+
+            <!-- TARJETA 4 -->
+            <div class="tactical-card">
+                <div class="card-header">
+                    <span class="mod-id">MOD://04-CIRT-ALERT</span>
+                    <span class="mod-badge alert-badge">CRITICAL DISPATCH</span>
+                </div>
+                <div class="card-icon">⚡</div>
+                <h3>Respuesta a Incidentes (DFIR)</h3>
+                <p>Escuadrón táctico de contención inmediata y mitigación de brotes de ransomware o intrusiones hostiles activas. Preservación forense forensically-sound de memoria volátil y discos, análisis de causa raíz y erradicación garantizada.</p>
+                <div class="card-tags">
+                    <span>CIRT Inmediato</span><span>Forense Digital</span><span>Anti-Ransomware</span>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="details-link" onclick="openModal('dfir'); return false;">Ver detalles <span>→</span></a>
+                    <span class="doc-ref">DOC://SPEC-DFR</span>
+                </div>
+            </div>
+
+            <!-- TARJETA 5 -->
+            <div class="tactical-card">
+                <div class="card-header">
+                    <span class="mod-id">MOD://05-PIPELINE</span>
+                    <span class="mod-badge">K8S & CSPM</span>
+                </div>
+                <div class="card-icon">☁️</div>
+                <h3>Protección Cloud & DevSecOps</h3>
+                <p>Integración de análisis continuo SAST, DAST y análisis de dependencias SCA dentro de canalizaciones CI/CD. Blindaje de clústeres Kubernetes, administración de secretos en tiempo de ejecución y gobierno postural CSPM en AWS, Azure y GCP.</p>
+                <div class="card-tags">
+                    <span>SAST / DAST</span><span>Kubernetes Hardening</span><span>IaC Security</span>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="details-link" onclick="openModal('cloud'); return false;">Ver detalles <span>→</span></a>
+                    <span class="doc-ref">DOC://SPEC-CLD</span>
+                </div>
+            </div>
+
+            <!-- TARJETA 6 -->
+            <div class="tactical-card">
+                <div class="card-header">
+                    <span class="mod-id">MOD://06-ASSURANCE</span>
+                    <span class="mod-badge success-badge">CERTIFIED AUDIT</span>
+                </div>
+                <div class="card-icon">📋</div>
+                <h3>Auditoría & Cumplimiento GRC</h3>
+                <p>Preparación y validación forense para acreditaciones regulatorias de máxima exigencia: ISO 27001, SOC 2 Tipo II, PCI-DSS, ENS (Esquema Nacional de Seguridad) y GDPR. Mapeo de controles continuos y mitigación de brechas de cumplimiento.</p>
+                <div class="card-tags">
+                    <span>ISO 27001</span><span>SOC 2 Tipo II</span><span>ENS Alto</span>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="details-link" onclick="openModal('grc'); return false;">Ver detalles <span>→</span></a>
+                    <span class="doc-ref">DOC://SPEC-GRC</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SECCIÓN LLAMADA A LA ACCIÓN (CTA) -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <div class="cta-icon">?</div>
+                <div class="cta-text">
+                    <span class="cta-subtitle">CONSULTORÍA DEFENSIVA PERSONALIZADA</span>
+                    <h2>¿Necesita una solución de seguridad a la medida?</h2>
+                    <p>Consulte de forma confidencial con nuestros especialistas en ingeniería de defensa y analistas de inteligencia de amenazas. Desplegamos protocolos de diagnóstico preliminar sin fricción técnica.</p>
+                </div>
+            </div>
+            <div class="cta-actions">
+                <button class="btn-primary">📅 AGENDAR CONSULTA TÉCNICA</button>
+                <a href="#" class="btn-text">Ver Acuerdos SLA</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="main-footer">
+        <div class="footer-logo">
+            <span class="logo-icon">🛡️</span> AegisSec <span class="version">v4.2.0-SECURE</span>
+        </div>
+        <div class="footer-copy">
+            © 2026 AegisSec Threat Intelligence & Cyber Defense. Todos los derechos reservados.
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacidad</a>
+            <a href="#">Términos</a>
+            <a href="#">Security Advisories</a>
+        </div>
+    </footer>
+
+    <!-- ESTRUCTURA DE LA VENTANA MODAL (Oculta por defecto) -->
+    <div id="tacticalModal" class="modal-overlay">
+        <div class="modal-card">
+            
+            <div class="modal-header">
+                <div>
+                    <span class="mod-badge" id="modalBadge">MOD://INFO</span>
+                    <h2 id="modalTitle">Título del Servicio</h2>
+                </div>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            
+            <div class="modal-body">
+                <h4 class="accent-text">Capacidades Tácticas</h4>
+                <ul id="modalCapacidades" class="tactical-list">
+                    <!-- Se llena con JS -->
+                </ul>
+                
+                <h4 class="accent-text" style="margin-top: 25px;">Entregables Garantizados</h4>
+                <ul id="modalEntregables" class="tactical-list">
+                    <!-- Se llena con JS -->
+                </ul>
+            </div>
+            
+            <div class="modal-footer">
+                <button class="btn-primary" style="width: 100%;" onclick="closeModal()">
+                    ENTENDIDO / CERRAR PANEL
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="servicios.js"></script>
+</body>
+</html>
